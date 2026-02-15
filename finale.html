@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valentine Love Quest - Finale</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="hud-full intro-page finale-page">
+    <main class="page">
+      <h1 class="page-title">Valentine Love Quest - Finale</h1>
+      <p class="instructions">Climb to the highest ledge and open the love letter.</p>
+
+      <section class="canvas-wrap">
+        <button
+          id="sound-toggle"
+          class="sound-toggle intro-sound"
+          type="button"
+          aria-label="Toggle music"
+          data-hud
+          data-hud-persistent="true"
+        >
+          🎵
+        </button>
+
+        <h2 class="question-banner question-banner--finale">💝 Open your love letter 💝</h2>
+
+        <aside class="overlay controls-box controls-toggle is-hidden" aria-label="Controls guide" aria-hidden="true">
+          <h2 class="overlay-title">Controls</h2>
+          <p class="overlay-text">← → or A/D to move</p>
+          <p class="overlay-text">SPACE or W to jump</p>
+        </aside>
+
+        <p class="hud-hint" data-hud data-hud-persistent="true">Press H to toggle controls</p>
+
+        <canvas id="game-canvas" width="1536" height="934" aria-label="Valentine finale level"></canvas>
+      </section>
+    </main>
+
+    <section id="love-letter-modal" class="modal love-letter-modal" aria-hidden="true">
+      <article class="modal-card love-letter-card">
+        <div class="love-letter-paper">
+          <p class="letter-top-icons">💝 💌 💝</p>
+          <h2 class="love-letter-heading">My Dearest Valentine</h2>
+          <p class="letter-body" id="love-letter-body"></p>
+          <div class="letter-signature">
+            <p class="letter-signoff">Forever yours,</p>
+            <p class="letter-name">Your Valentine 💖</p>
+          </div>
+        </div>
+        <button id="replay-quest-button" class="primary-btn replay-quest-btn" type="button">
+          <span class="replay-icon">❤️</span>
+          <span>REPLAY GAME</span>
+        </button>
+        <p class="letter-decor-hearts">❤️ 💕 💗 💖 💝 💘 💞 ❤️</p>
+      </article>
+    </section>
+
+    <script type="module" src="finale.js"></script>
+  </body>
+</html>

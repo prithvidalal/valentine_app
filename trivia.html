@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valentine Love Quest - Trivia</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="hud-full intro-page trivia-page">
+    <main class="page">
+      <h1 class="page-title">Valentine Love Quest - Level 3 Trivia</h1>
+      <p class="instructions">Climb every zone and open all 5 mystery question boxes.</p>
+
+      <section class="canvas-wrap">
+        <button
+          id="sound-toggle"
+          class="sound-toggle intro-sound"
+          type="button"
+          aria-label="Toggle music"
+          data-hud
+          data-hud-persistent="true"
+        >
+          🎵
+        </button>
+
+        <h2 class="question-banner question-banner--trivia">
+          Put your love to test<br>
+          Open all the mystery boxes
+        </h2>
+
+        <div class="hud-stack">
+          <aside class="overlay controls-box controls-toggle is-hidden" aria-label="Controls guide" aria-hidden="true">
+            <h2 class="overlay-title">Controls</h2>
+            <p class="overlay-text">← → or A/D to move</p>
+            <p class="overlay-text">SPACE or W to jump</p>
+          </aside>
+
+          <aside class="overlay trivia-status" aria-live="polite" data-hud data-hud-persistent="true">
+            <h2 class="overlay-title">Status</h2>
+            <p class="overlay-text" id="lives-text">Lives: ❤️ ❤️ ❤️</p>
+            <p class="overlay-text" id="score-text">Score: 0/5</p>
+            <p class="overlay-text" id="opened-text">Opened: 0/5</p>
+            <div class="progress-track" aria-hidden="true">
+              <div id="progress-fill" class="progress-fill"></div>
+            </div>
+          </aside>
+        </div>
+
+        <p class="hud-hint" data-hud data-hud-persistent="true">Press H to toggle controls</p>
+
+        <canvas id="game-canvas" width="1536" height="934" aria-label="Valentine trivia level"></canvas>
+      </section>
+    </main>
+
+    <section id="question-modal" class="modal" aria-hidden="true">
+      <article class="modal-card">
+        <h2 class="modal-title" id="modal-title">Mystery Question</h2>
+        <p class="modal-question" id="modal-question"></p>
+        <div id="options-grid" class="options-grid"></div>
+        <p id="feedback" class="feedback"></p>
+      </article>
+    </section>
+
+    <section id="end-modal" class="modal" aria-hidden="true">
+      <article class="modal-card">
+        <h2 class="modal-title">Love Quest Summary</h2>
+        <p class="modal-question" id="end-title"></p>
+        <div class="end-summary">
+          <p class="overlay-text" id="end-score"></p>
+          <p class="overlay-text" id="end-lives"></p>
+        </div>
+        <div class="modal-actions">
+          <button id="replay-button" class="primary-btn" type="button">Play Again</button>
+          <button id="continue-button" class="primary-btn is-hidden" type="button">Continue with the quest</button>
+        </div>
+      </article>
+    </section>
+
+    <script type="module" src="trivia.js"></script>
+  </body>
+</html>

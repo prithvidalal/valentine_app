@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valentine Love Quest</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="hud-full intro-page">
+    <main class="page">
+      <section class="canvas-wrap">
+        <button
+          id="sound-toggle"
+          class="sound-toggle intro-sound"
+          type="button"
+          aria-label="Toggle music"
+          data-hud
+          data-hud-persistent="true"
+        >
+          🎵
+        </button>
+        <div class="intro-title-card" data-hud data-hud-persistent="true" aria-hidden="true">
+          <h1 class="intro-title">LOVE QUEST</h1>
+          <p class="intro-heart">💖</p>
+          <p class="intro-subtitle">Valentine Edition</p>
+        </div>
+        <aside class="overlay controls-box" aria-label="Controls guide" data-hud data-hud-persistent="true">
+          <h2 class="overlay-title">Controls</h2>
+          <p class="overlay-text">← → or A/D to move</p>
+          <p class="overlay-text">SPACE or W to jump</p>
+        </aside>
+        <canvas id="game-canvas" width="1536" height="934" aria-label="Love quest platformer"></canvas>
+      </section>
+    </main>
+
+    <script type="module" src="game.js"></script>
+  </body>
+</html>
