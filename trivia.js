@@ -21,6 +21,7 @@ const endLives = document.getElementById("end-lives");
 const replayButton = document.getElementById("replay-button");
 const continueButton = document.getElementById("continue-button");
 const TRIVIA_CLEAR_KEY = "loveQuestTriviaCleared";
+const QUESTIONS_URL = "./data/trivia-questions.json";
 
 function setProgressKey() {
   try {
@@ -218,7 +219,7 @@ function openQuestion(question, trigger) {
 
 async function loadQuestions() {
   try {
-    const response = await fetch("./data/trivia-questions.json", { cache: "no-cache" });
+    const response = await fetch(QUESTIONS_URL, { cache: "no-store" });
     if (!response.ok) {
       return fallbackQuestions;
     }
